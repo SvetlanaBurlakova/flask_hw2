@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Математические операции над двумя числами{% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+    	<header>Введите два числа и выберите операцию</header>
+    {% endblock %}
+
+    {% block content %}
+        <form action="/" method="post">
+            <input type="number" name="number1" placeholder="Число">
+            <input type="number" name="number2" placeholder="Число">
+
+            <label for="operation">Выберите операцию:</label>
+            <select id="operations" name="operations">
+                <option value="add">Сложение</option>
+                <option value="sub">Вычетание</option>
+                <option value="mult">Умножение</option>
+                <option value="div">Деление</option>
+            </select>
+
+            <input type="submit" value="Вычислить">
+    </form>
+    {% endblock %}
+</body>
+</html>

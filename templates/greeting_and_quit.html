@@ -1,0 +1,14 @@
+{% extends 'base_9.html' %}
+
+{% block title %}Приветствие{% endblock %}
+
+{% block header %}
+    <header>Приветствие</header>
+{% endblock %}
+
+{% block content %}
+    <form action="/greetings" method="post">
+        <p>Привет, {{ name }}</p>
+        <input type="submit" value="Выход">
+    </form>
+{% endblock %}
